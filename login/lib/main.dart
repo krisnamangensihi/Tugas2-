@@ -246,20 +246,6 @@ class _dashboardState extends State<dashboard> {
                       Text('Gopay')
                     ],
                   ),
-                  // SizedBox(height: 10),
-                  // Row(
-                  //   //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //   children: [
-                  //     Image.asset(
-                  //       'assets/dana.png',
-                  //       height: 70,
-                  //     ),
-                  //     SizedBox(
-                  //       width: 20,
-                  //     ),
-                  //     Text('Gopay')
-                  //   ],
-                  // ),
                 ],
               ),
             )
