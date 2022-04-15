@@ -27,7 +27,7 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: ListView(
           children: [
@@ -84,7 +84,7 @@ class _loginState extends State<login> {
               children: [
                 FloatingActionButton.extended(
                   backgroundColor: const Color(0xff5677FF),
-                  foregroundColor: Colors.white,
+                  foregroundColor: Colors.black,
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
@@ -164,20 +164,308 @@ class _dashboardState extends State<dashboard> {
                         icon: Icon(Icons.search, color: Colors.white),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return profile();
+                          }));
+                        },
                         icon: Icon(
                           Icons.account_circle,
                           color: Colors.white,
                         ),
                       ),
                     ],
-                  )
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/3 card.png',
+                        height: 170,
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class profile extends StatefulWidget {
+  const profile({Key? key}) : super(key: key);
+
+  @override
+  State<profile> createState() => _profileState();
+}
+
+class _profileState extends State<profile> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xff5677FF),
+      appBar: AppBar(
+        title: Text('Profile Saya'),
+        backgroundColor: Color(0xff5677FF),
+      ),
+      body: SafeArea(
+          child: ListView(
+        children: [
+          SizedBox(height: 20),
+          Column(
+            children: [
+              Image.asset(
+                'assets/Krisna4.png',
+                width: 140,
+                height: 140,
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Krisna Mangansihi',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 23,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(height: 5),
+              Container(
+                padding: EdgeInsets.only(
+                  top: 10,
+                  bottom: 10,
+                  left: 15,
+                  right: 15,
+                ),
+                margin:
+                    EdgeInsets.only(top: 20, bottom: 20, left: 20, right: 20),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10)),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('No.Rek',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )),
+                        SizedBox(width: 145),
+                        Text(
+                          '170563200974',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(width: 8),
+                        // Icon(
+                        //   Icons.copy,
+                        //   size: 16,
+                        //   color: Colors.black,
+                        // ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Divider(
+                      height: 15,
+                      thickness: 3,
+                      indent: 0,
+                      endIndent: 0,
+                      color: Colors.black,
+                    ),
+                    SizedBox(height: 5),
+                    Row(
+                      children: [
+                        Text('No.Telepon',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )),
+                        SizedBox(width: 115),
+                        Text(
+                          '0895629565522',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(
+                      height: 15,
+                      thickness: 3,
+                      indent: 0,
+                      endIndent: 0,
+                      color: Colors.black,
+                    ),
+                    SizedBox(height: 5),
+                    Row(
+                      children: [
+                        Text(
+                          'Tanggal Lahir',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(width: 130),
+                        Text(
+                          '30 Mei 2000',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(
+                      height: 15,
+                      thickness: 3,
+                      indent: 0,
+                      endIndent: 0,
+                      color: Colors.black,
+                    ),
+                    SizedBox(height: 5),
+                    Row(
+                      children: [
+                        Text(
+                          'Saldo Anda',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(width: 150),
+                        Text(
+                          'Rp.149.000',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 30, right: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Nama Lengkap',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      'Krisna Dwiputra Mangansihi',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Divider(
+                height: 14,
+                thickness: 2,
+                indent: 20,
+                endIndent: 20,
+                color: Colors.white,
+              ),
+              SizedBox(height: 3),
+              Padding(
+                padding: const EdgeInsets.only(left: 30, right: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Email',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      'mangensihi29@gmail.com',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Divider(
+                height: 14,
+                thickness: 2,
+                indent: 20,
+                endIndent: 20,
+                color: Colors.white,
+              ),
+              SizedBox(height: 3),
+              Padding(
+                padding: const EdgeInsets.only(left: 30, right: 30),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Alamat Rumah',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      'Bukit Asri Ciomas Jl.Pinus I, Desa Pagelaran,Kecamatan Ciomas,Bogor,Jawa Barat,Indonesia,16610',
+                      // maxLines: 2,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        // overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Divider(
+                height: 10,
+                thickness: 2,
+                indent: 20,
+                endIndent: 20,
+                color: Colors.white,
+              ),
+            ],
+          ),
+        ],
+      )),
     );
   }
 }
