@@ -27,7 +27,7 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: ListView(
           children: [
@@ -189,6 +189,80 @@ class _dashboardState extends State<dashboard> {
                 ],
               ),
             ),
+            SizedBox(height: 15),
+            Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Row(
+                children: [Text('List E-Wallet')],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 10, right: 30),
+              child: Column(
+                //crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Row(
+                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(
+                        'assets/gopay.png',
+                        height: 100,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text('Isi Saldo')
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(
+                        'assets/ovo.png',
+                        height: 50,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text('Isi Saldo')
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Image.asset(
+                        'assets/linkaja.png',
+                        height: 70,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text('Gopay')
+                    ],
+                  ),
+                  // SizedBox(height: 10),
+                  // Row(
+                  //   //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: [
+                  //     Image.asset(
+                  //       'assets/dana.png',
+                  //       height: 70,
+                  //     ),
+                  //     SizedBox(
+                  //       width: 20,
+                  //     ),
+                  //     Text('Gopay')
+                  //   ],
+                  // ),
+                ],
+              ),
+            )
           ],
         ),
       ),
